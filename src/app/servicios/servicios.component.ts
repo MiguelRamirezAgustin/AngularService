@@ -1,5 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RestServiciosService } from '../shared/rest-servicios.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
 @Component({
   selector: 'app-servicios',
@@ -8,27 +12,34 @@ import { RestServiciosService } from '../shared/rest-servicios.service';
 })
 export class ServiciosComponent implements OnInit {
 
-  constructor(public restServicio: RestServiciosService) { }
-  
+  constructor(public restServicio: RestServiciosService,
+    private http: HttpClient) { }
 
   ngOnInit() {
   }
 
+  
   consultar() {
-    this.restServicio.cargarPrimas().subscribe(
-      respuesta => {
+    this.restServicio.cargarPrimas()
+    .subscribe( respuesta => {
+      var result= respuesta;
         console.log('respuesta es___ ' + respuesta);
       });
   }
+
+  consultarGet() {
+    this.restServicio.getResultados()
+    .subscribe(res => {
+      var result=JSON.stringify(res);
+      console.log('Respuesta ' + result);
+    });
+  }
+
 }
 
 
+
 // this._servicios.enviarNotificacionMensaje(this.username + ': ' + message.content, message.conversationId, message.sender).subscribe();
-
-
-
-
-
 
 
 // servicioSda(){

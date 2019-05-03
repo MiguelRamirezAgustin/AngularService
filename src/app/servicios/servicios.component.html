@@ -1,1 +1,22 @@
-<button class="btn btn-primary" (click)="consultar()">Consultar</button>
+<button class="btn btn-outline-success" (click)="consultarGet()">Get</button>
+<br>
+<br>
+<button class="btn btn-primary" (click)="consultar()">Post</button>
+<br>
+<br>
+
+
+<div class=" col-md-12">
+      <table class="table table-borderd">
+            <thead>
+                  <tr>
+                        <th scope="col">id</th>
+                  </tr>
+            </thead>
+            <tbody>
+                  <tr *ngFor="let  empleado of result">
+                        <td>{{empleado}}</td>
+                  </tr>
+            </tbody>
+      </table>
+</div>
