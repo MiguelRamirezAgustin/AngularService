@@ -1,0 +1,39 @@
+<div class="container custom-container-2">
+  <div class="no-data text-center" *ngIf="Empleado.length == 0">
+    <p>No hay empledaodos</p>
+  </div>
+  <button class="btn btn-outline-primary" routerLink="/crearCliente">
+    Agregar Empleado
+  </button>
+
+  <div  *ngIf="Empleado.length != 0">
+    <h3 class="mb-3 text-center">Lista de empledaodos</h3>
+  </div>
+  <div class="col-md-12">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellidos</th>
+          <th scope="col">Email</th>
+          <th scope="col">Telefono</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let  empleado of Empleado">
+            <td>{{empleado.id}}</td>
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.apellidos}}</td>
+            <td>{{empleado.email}}</td>
+            <td>{{empleado.telefono}}</td>
+            <td>
+                <span class="edit" routerLink="/ListaCliente/{{empleado.id}}">Editar</span><br>
+                <span class="delete" (click)="eliminarEmpledado(empleado.id)">Eliminar</span>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
