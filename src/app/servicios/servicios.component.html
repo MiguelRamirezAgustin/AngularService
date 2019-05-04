@@ -4,19 +4,45 @@
 <button class="btn btn-primary" (click)="consultar()">Post</button>
 <br>
 <br>
+<button class="btn btn-primary" (click)="consultarUsuarios()">Get Usuarios</button>
 
 
-<div class=" col-md-12">
+<div class=" col-md-12" *ngIf="result1.lenght !=0">
       <table class="table table-borderd">
             <thead>
                   <tr>
                         <th scope="col">id</th>
+                        <th scope="col">id padre</th>
+                        <th scope="col">contenido</th>
+                        <th scope="col">titulo</th>
+                        <th scope="col">fecha</th>
                   </tr>
             </thead>
             <tbody>
-                  <tr *ngFor="let  empleado of result">
-                        <td>{{empleado}}</td>
+                  <tr *ngFor="let empleado of result1 | keyvalue">
+                        <td >{{empleado.value.resultado.id}}</td>
+                        <td>{{empleado.value.resultado.id_padre}}</td>
+                        <td>{{empleado.value.resultado.titulo}}</td>
+                        <td>{{empleado.value.resultado.imagen}}</td>
+                        <td>{{empleado.value.resultado.fecha_alta}}</td>
                   </tr>
             </tbody>
       </table>
 </div>
+
+
+
+<ul lass="list-group" *ngFor="let datos of datosUsuarios">
+      <li class="list-group-item">
+            <a>Email: {{datos}}</a>
+      </li>
+      <li class="list-group-item">
+
+      </li>
+      <li class="list-group-item">
+
+      </li>
+      <li class="list-group-item">
+            
+      </li>
+</ul>
