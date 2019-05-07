@@ -5,6 +5,8 @@
 <br>
 <br>
 <button class="btn btn-primary" (click)="consultarUsuarios()">Get Usuarios</button>
+<!-- 
+*ngIf="result1.lenght !=0" -->
 
 
 <div class=" col-md-12" *ngIf="result1.lenght !=0">
@@ -32,17 +34,19 @@
 
 
 
-<ul lass="list-group" *ngFor="let datos of datosUsuarios">
-      <li class="list-group-item">
-            <a>Email: {{datos}}</a>
-      </li>
-      <li class="list-group-item">
 
-      </li>
+<ul lass="list-group" *ngFor="let dato01  of respuesta001">
       <li class="list-group-item">
+            <a>Email: {{dato01.results[0].gender}}</a>
+      </li>
+</ul> 
 
+
+<!-- <ul lass="list-group" *ngFor="let dato01  of arrayData">
+      <li class="list-group-item">
+            <a>Email: {{dato01.results[0].gender}}</a>
       </li>
       <li class="list-group-item">
-            
+            <a>Email: {{dato01.info.seed}}</a>
       </li>
-</ul>
+</ul>  -->`

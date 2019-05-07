@@ -30,5 +30,6 @@ export class ListaClienteComponent implements OnInit {
       })
     }
   }  
+  
 
 }
