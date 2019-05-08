@@ -13,20 +13,20 @@ export class ListaClienteComponent implements OnInit {
   constructor(public restApi:RestApiService) { }
 
   ngOnInit() {
-    this.cargarEmpledo();
+    this.cargarEmpleado();
   }
 
-  cargarEmpledo() {
+  cargarEmpleado() {
     return this.restApi.getEmpleados().subscribe((data: {}) => {
       this.Empleado = data;
     })
   }
 
  
-  eliminarEmpledado(id) {
-    if (window.confirm('Eliminar usuario?')){
+  eliminarEmpledado(id,nombre,apellidos) {
+    if (window.confirm('Desea eliminar el usuario?\n  ' + nombre +' '+ apellidos)){
       this.restApi.eliminarEmpleado(id).subscribe(data => {
-        this.cargarEmpledo()
+        this.cargarEmpleado()
       })
     }
   }  

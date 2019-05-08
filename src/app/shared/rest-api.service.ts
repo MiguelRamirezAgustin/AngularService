@@ -33,8 +33,8 @@ export class RestApiService {
   }
 
 
-  getEmpleado(id): Observable<Empleado> {
-    return this.http.get<Empleado>(this.apiURL + '/empleados/' + id)
+  OptenerUnEmpleado(id): Observable<Empleado> {
+    return this.http.get<Empleado>(this.apiURL + '/empleados/' + [id])
       .pipe(
         retry(1),
         catchError(this.handleError)
@@ -79,6 +79,8 @@ export class RestApiService {
     window.alert(errorMessage);
     return throwError(errorMessage);
  }
+
+
 
 }
 

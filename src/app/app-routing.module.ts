@@ -10,7 +10,7 @@ import { UsuariosActualizarComponent } from './usuarios-actualizar/usuarios-actu
 const routes: Routes = [
   {path: 'crearCliente', component:CrearClienteComponent},
   {path: 'ListaCliente', component:ListaClienteComponent},
-  {path: 'ActualizarCliente', component:ActualizarClienteComponent},
+  {path: 'ActualizarCliente/:id', component:ActualizarClienteComponent},
   {path: 'servicios', component:ServiciosComponent},
   {path: 'crudFireBAse', component:CrudComponent},
   {path: 'Usuario', component:UsuariosActualizarComponent},

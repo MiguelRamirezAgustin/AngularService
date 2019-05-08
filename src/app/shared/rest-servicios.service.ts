@@ -66,7 +66,7 @@ export class RestServiciosService {
 
     //Nuevos servicios CRUD
     GetUsuarios(){
-      return this.http.get('http://14ffccf1.ngrok.io/api/users/listaUsuarios');
+      return this.http.get('http://289ec328.ngrok.io/api/users/listaUsuarios');
 
     }
     
@@ -80,7 +80,7 @@ export class RestServiciosService {
       }
       //Ejemplo de datos 
       //var  datos:any={name:'miguel',age:'12',email:'migurl@gmail.com', password:'12'};
-        return this.http.post('http://14ffccf1.ngrok.io/api/users/agregarUsuarios', JSON.stringify(usuario), this.httpOptions)
+        return this.http.post('http://289ec328.ngrok.io/api/users/agregarUsuarios', JSON.stringify(usuario), this.httpOptions)
     }
 
     EliminarUsuario(id):Observable<any>{
@@ -91,11 +91,11 @@ export class RestServiciosService {
         })
       }
   
-     return this.http.delete('http://14ffccf1.ngrok.io/api/users/eliminarUsuarios'  + id +this.httpOptions)
+     return this.http.delete('http://289ec328.ngrok.io/api/users/eliminarUsuarios'  + id +this.httpOptions)
     }
 
     ActualizarUsuario(id, usuario):Observable<any>{
-      return this.http.put('http://14ffccf1.ngrok.io/api/users/listaUsuarios', id + JSON.stringify(usuario)+ this.httpOptions)
+      return this.http.put('http://289ec328.ngrok.io/api/users/listaUsuarios', id + JSON.stringify(usuario)+ this.httpOptions)
     }
 
     
