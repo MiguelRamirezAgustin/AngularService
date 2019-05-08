@@ -91,3 +91,45 @@ export class RestApiService {
 
 
 
+
+//El servicio es 
+//noombre del archivo es db.json
+//comando para levantar el servicio local
+//json-server db.json   se ejecuta dentro de la carpeta 
+
+// {
+//   "empleados": [
+//     {
+//       "nombre": "Maria",
+//       "apellidos": "Lopez Lopez",
+//       "email": "maria@gmail.com",
+//       "phone": 0,
+//       "telefono": "55234541432",
+//       "id": 18
+//     },
+//     {
+//       "nombre": "Miguel",
+//       "apellidos": "Ramirez Agustin",
+//       "email": "miguel@outlook.com",
+//       "phone": 0,
+//       "telefono": "2381212312",
+//       "id": 19
+//     },
+//     {
+//       "nombre": "Pedro",
+//       "apellidos": "Luna Martinez",
+//       "email": "martine@hotmail.com",
+//       "phone": 0,
+//       "telefono": "7762535373",
+//       "id": 20
+//     },
+//     {
+//       "nombre": "Victora",
+//       "apellidos": "Agustin Martinez",
+//       "email": "Victoria@gmail.com",
+//       "phone": 0,
+//       "telefono": "5576264873",
+//       "id": 22
+//     }
+//   ]
+// }
